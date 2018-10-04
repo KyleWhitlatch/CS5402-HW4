@@ -38,7 +38,7 @@ def decisiontree(X, Y, iteration, testing):
     X = np.array(X)
     Y = np.array(Y)
     dtree.fit(X, Y)
-    #export_graphviz(dtree,out_file=('dTreeIris.dot' + str(iteration)),class_names=list(set(Y)))
+    export_graphviz(dtree,out_file=('dTreeIris.dot' + str(iteration)),class_names=list(set(Y)))
     return dtree.score(testing, Y)
 
 
